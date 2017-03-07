@@ -1,0 +1,1 @@
+alert('my  koa-static try');

@@ -1,0 +1,74 @@
+<style type="text/css">
+	.top-home{
+		background: #fff;
+		border-bottom: 10px solid #f5f5f5;
+	}
+	.top-home-search{
+		margin: 10px 13px;
+		padding: 1px 0 0 30px;
+		font: 11px/33px a;
+		color: rgba(0,0,0,0.4);
+		border: 1px solid #f5f5f5;
+		border-radius: 2px;
+		background:url('/static/img/search.png') no-repeat 8px center;
+		background-size: 14px;
+		overflow: hidden;
+		height: 33px;
+	}
+	.cover{width: 100%;}
+	.top-home-btn{
+		margin: 14px 0 4px;
+		width: 100%;
+		display:-webkit-box;
+	}
+	.top-home-btn li{
+		font-size: 12px;
+		line-height: 2.4;
+		text-align: center;
+		-webkit-box-flex: 1;
+	}
+	.top-home-icon{
+		display: block;
+		margin: 0 auto;
+		height: 22px;
+		width: 22px;
+	}
+</style>
+<section class="top-home">
+	<a href="/search">
+		<div class="top-home-search">输入书名/作者/关键字</div>
+	</a>
+	<div class="slider-banner">
+		<div>
+			<a href="">
+				<img class="cover" src="/static/img/banner_girl.jpg" alt="">
+			</a>
+		</div>
+	</div>
+	<ul class="top-home-btn">
+		<li>
+			<a href="/male">
+				<img src="/static/img/male.png" alt="" class="top-home-icon">
+				<p class="top-home-des">男生</p>
+			</a>
+		</li>
+		<li>
+			<a href="/female">
+				<img src="/static/img/female.png" alt="" class="top-home-icon">
+				<p class="top-home-des">女生</p>
+			</a>
+		</li>
+		<li>
+			<a href="/rank">
+				<img src="/static/img/rank.png" alt="" class="top-home-icon">
+				<p class="top-home-des">排行</p>
+			</a>
+		</li>
+		<li>
+			<a href="/category">
+				<img src="/static/img/category.png" alt="" class="top-home-icon">
+				<p class="top-home-des">分类</p>
+			</a>
+		</li>
+	</ul>
+</section>

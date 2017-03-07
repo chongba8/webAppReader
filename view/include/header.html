@@ -1,0 +1,67 @@
+<style>
+	.head-tab{
+		padding: 0 90px;
+		text-align: center;
+		line-height: 44px;
+		background: #efeff0;
+		border-bottom: 1px solid #ddd;
+		position: relative;
+	}
+	.head-tab a:before{
+		content: '\4e66\67b6';
+		display: block;
+		margin: 0 auto;
+		width: 2em;
+	}
+	.head-tab a:first-child:before{
+		content: '\4e66\57ce';
+	}
+	.head-tab i{
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		height: 2px;
+		width: 34px;
+		background: #777;
+	}
+	.head-tab span{
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 44px;
+		height: 44px;
+	}
+	.head-user{
+		left: 0;
+		background: url('/static/img/user.png') no-repeat center;
+		background-size: 16px ;
+	}
+	.head-login{
+		right: 0;
+		background: url('/static/img/login.png') no-repeat center;
+		background-size: 20px;
+	}
+	.swip-tab{
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+	}
+	.swip-tab a{
+		float: left;
+		text-align: center;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	}
+	.swip-tab-2 a{
+		width: 50%;
+	}
+</style>
+<div class="head-tab">
+	<div class="swip-tab swip-tab-2">
+		<a href="javascript:" class="clearfloat"></a>
+		<a href="javascript:" class="clearfloat"></a>
+		<i></i>
+	</div>
+	<span class="head-user"></span>
+	<span class="head-login"></span>
+</div>
