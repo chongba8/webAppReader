@@ -1,0 +1,44 @@
+<style>
+	.shelf-search{
+		margin: 10px 60px 10px ;
+	}
+	.shelf-switch{
+		position: absolute;
+		right: 10px;
+		top: 0;
+		width: 36px;
+		height: 36px;
+		float: right;
+		border: 1px solid #f0f0f0;
+		background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01yLF3fEj8l/b7UfAdlfufQKML.png) no-repeat center;
+		background-size:16px; 
+	}
+	.shelf-top{
+		width:100%;
+		position:relative;
+		background: #fff;
+	}
+</style>
+<div>
+	<div class="shelf-top">
+		<div class="top-home-search shelf-search">输入书名/作者/关键字</div>
+		<div class="shelf-switch"></div>
+	</div>
+	<div>
+		<ul class="list-h5">
+			<li v-for='item in hot' v-if='$index==0'>
+				<div class="book-h5">
+					<div class="book-h5-cover">
+						<img alt='{{ item.title}}' v-bind:src='item.cover'>
+						<p class="book-h5-progerss">完结</p>
+					</div>
+					<div class="book-h5-info">
+						<p class="book-h5-title">{{ item.title}}</p>
+						<p class="book-h5-author">{{ item.authors}}</p>
+						<p class="book-h5-summary">{{ item.summary}}</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

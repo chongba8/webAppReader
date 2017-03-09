@@ -1,8 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-    </body>
-</html>
+
+<section class="channel-h5">
+	<div>
+		<div class="channel-h5-header">
+			<p class="channel-h5-header-title">重磅推荐<i>推</i></p>
+			<div class="tab">
+				<a href="javascript:" class="tab-on">男</a>
+				<a href="javascript:">女</a>
+			</div>
+		</div>
+		<ul class="list-h5">
+			<li v-for='item in hot' v-if='$index==0'>
+				<div class="book-h5">
+					<div class="book-h5-cover">
+						<img alt='{{ item.title}}' v-bind:src='item.cover'>
+						<p class="book-h5-progerss">完结</p>
+					</div>
+					<div class="book-h5-info">
+						<p class="book-h5-title">{{ item.title}}</p>
+						<p class="book-h5-author">{{ item.authors}}</p>
+						<p class="book-h5-summary">{{ item.summary}}</p>
+						<div class="book-h5-tag" >
+							<span v-for='tag in item.tags'>{{ tag }}</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<!-- 没图列表 -->
+			<li v-for='item in hot' v-if='$index>0&&$index<9'>
+				<div class="book-h5 book-h5-no_img">
+					<span class="book-h5-no_img-order">0{{ $index }}</span>
+					<div class="book-h5-no_img-info">
+						<p class="book-h5-no_img-info-title">{{ item.title}}</p>
+						<p class="book-h5-no_img-info-author">{{ item.authors}}</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="channel-h5-footer">
+		<a href="javascript:">换一换</a>
+		<a href="javascript:">查看全部</a>
+	</div>
+</section>

@@ -2,7 +2,265 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <meta name="formmat-detection" content="telephone=no">
+       <link rel="stylesheet" href="/static/css/reset.css">
+              <link rel="stylesheet" href="/static/css/all.css">
+       <title>图书详情</title>
+       <style>
+       .main-card{
+            border-bottom: 10px solid #f5f5f5;
+            background: #fff;
+            padding: 0 10px;
+       }
+           .book_book-cover{
+            float: left;
+            width: 93px;
+            height: 124px;
+            margin-right: 18px;
+            box-shadow: 0px 6px 5px -3px #aaa;
+            border: 1px solid #f0f0f0;
+            border-bottom: none;
+            overflow: hidden;
+            display: table-cell;
+           }
+           .book_u-book{
+            padding: 30px 20px 30px 30px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+           }
+           .book_book-info{
+            position: absolute;
+            top: 35px;
+            left: 50%;
+           }
+           .book_book-info h3{
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #000;
+           }
+           .book_book-info .author{
+            font-size: 12px;
+            color: #4b99a7;
+            line-height: 1.4;
+            margin-bottom: 5px;
+            display: block;
+           }
+           .reader{
+            display: block;
+
+                float: left;
+                margin-left: 14px;
+                font-size: 12px;
+                line-height: 20px;
+                color: #8d8d8d;
+           }
+           .u-grade{
+            height: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+           }
+           .star{
+            float: left;
+            width: 90px;
+            height: 20px;
+            background: url('static/img/star.png') no-repeat left 0 top -120px;
+            background-size: 90px 220px;
+           }
+           .price{
+            font: 13px/16px a;
+            margin-bottom: 5px;
+            overflow: hidden;
+           }
+           .book-number span{
+            display: block;
+            margin-right: 15px;
+            height: 16px;
+            font: 13px/16px a;
+            float: left;
+            overflow: hidden;
+           }
+           .book-finish{
+            border: 1px solid #4b99a7;
+            border-radius: 4px;
+            color:#4b99a7 ;
+            font: 12px/16px;
+              overflow: hidden;
+           }
+           .book-reading{
+            
+            padding: 0 10px 0 10px;
+            display: -webkit-box;
+           }
+           .book-reading div{
+            font: 14px/35px a;
+            height: 35px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0 10px;
+            -webkit-box-flex: 1;
+            text-align: center;
+           }
+           .book-reading .reading{
+            background: #f35d02;
+            border: 1px solid #e35109;
+            color: #fff;
+            margin-right: 20px;
+           }
+           .book-text{
+            margin-top: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 5px 10px;
+            color: #585858;
+           }
+           .book-text-new{
+            border-bottom: 1px solid #f5f5f5;
+           }
+           .book-text-new span{
+            font: 13px/20px a;
+            display: block;
+           }
+           .book-text-new span:first-child{
+             overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin-bottom: 5px;
+           
+           }
+           .book-new-date{
+            width: 100%;
+            text-align: center;
+            font: 14px/16px a;
+            margin-top: 15px;
+            color: #8d8d8d;
+           }
+           .category-tag{
+            padding: 20px 10px;
+           }
+           .cat-tag-head h3{
+                line-height: 2.4em;
+           }
+           .cat-tag span{
+            display: block;
+            float: left;
+            padding: 0 5px;
+            font: 14px/16px;
+            background:#fcedda;
+            border: 1px solid #d3d3d3;
+            color:#909da8;
+            border-radius: 4px;
+            margin-right: 10px;
+           }
+           .section-border{
+              border-bottom: 10px solid #f5f5f5;
+              padding-bottom: 20px;
+           }
+           .copyRight{
+            height: 60px;
+            padding: 10px 10px;
+            background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01gqI2q6SNw/NgbH9Zl17WwYes.png) no-repeat right 0 top 0;
+            background-size: 80px 60px;
+           }
+           .copyRight div{
+                color: #8d8d8d;
+                line-height: 2.4em;
+           }
+           .book-footer{
+            border-bottom: 1px solid #f5f5f5;
+           }
+       </style>
     </head>
     <body>
+    
+        <div >
+            <% include include/common-header.html %> 
+            <div class="book-scroll">
+                <div>
+                    <section class="main-card">
+                        <div class="book_u-book clearfloat">
+                            <div class="book_book-cover">
+                                <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01OHtNm5l9m/gOfnsAHQJpT0Wr.jpg!s" alt="">
+                            </div>
+                             <div class="book_book-info">
+                                    <h3 class="title">老九门</h3>
+                                    <span class="author">南们三俗</span>
+                                    <div class="u-grade">
+                                        <div class="star"></div>
+                                        <span class="reader">12个评价</span>
+                                    </div>
+                                    <div class="price">价格:&nbsp5书币/千字</div>
+                                    <div class="book-number">
+                                        <span class="number">130万字</span>
+                                        <span class="book-finish">已完结</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="book-reading">
+                            <div class="reading">开始阅读</div>
+                            <div class="download">下载</div>
+                        </div>
+                        <div class="book-text">
+                            <div class="book-text-new">
+                                <span>
+                                    管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告时间过了为国家我饿 附近的律师费 粉色礼服极武林风交付   圣诞节放假搜附近我呢 收费金额为
+                                </span>
+                                <span>qq群:&nbsp012454122545</span>
+                                
+                            </div>
+                            <div class="book-new-date">最新番翻跟新于：&nbsp2017-03-15</div>
+                        </div>
+                        
+                    </section>
+                    <section class="section-border">
+                        <div class="category-tag">
+                            <div class="cat-tag-head"><h3>类别标签</h3></div>
+                            <div class="cat-tag">
+                                <span>悬疑灵异</span>
+                                <span>灵异鬼怪</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section-border" id="app">
+                         <div class="channel-group">
+                            <div class="channel-group-header">
+                                <h2 class="channel-group-title">作者其他书</h2>
+                            </div>
+                            <ul class="book-table">
+                                <li v-for='item in hot' v-if='$index<6'>
+                                    <div class="u-book">
+                                        <div class="book-cover">
+                                            <img v-bind:src='item.cover' alt="{{ item.title }}">
+                                            <span class="u-tag freetag"></span>
+                                        </div>
+                                        <div class="book-info">
+                                            <p>{{ item.title }}</p>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="javasrcipt:" class="u-book-footer">查看全部&gt&gt</a>
+                        </div>
+                    </section>
+                    <section class="book-footer">
+                        <div class="copyRight">
+                            <div>图书信息</div>
+                            <div>版权：&nbsp悦读集团旗下云图书院</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+        </div>
+      
+        
     </body>
+    <script src="/static/script/vue.js"></script>
+    <script src="/static/script/zepto.js"></script>
+    <script src="/static/script/pages/book.js"></script>
+    <script src="/static/script/pages/index.js"></script>
+
 </html>

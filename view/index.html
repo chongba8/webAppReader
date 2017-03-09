@@ -9,19 +9,34 @@
        <title>书城首页</title>
     </head>
     <body>
-    	<div id="root">
-            <% include include/header.html %>   
-            <div>
-                 <% include include/index-top.html %>   
-                 <% include include/index-hot.html %>   
-                 <% include include/index-recommend.html %>   
-                 <% include include/index-female.html %>   
-                 <% include include/index-male.html %>   
-                 <% include include/index-free.html %>   
-                 <% include include/index-bottom.html %>   
-                 
-            </div>
+    
+        <div id="app" style="width: 550px;">
+                    <% include include/header.html %> 
+                <div class="container-wrap"  style="width: 550px;"> 
+                    <div style="width:1100px;height:100%;transition-duration:.5s;transform:translate3d({{position}}px,0px,0px);">
+                            <div style="float:left;width: 550px;height: 100%;overflow-y:scroll;">
+                                    <div>
+                                         <% include include/index-top.html %>   
+                                         <% include include/index-hot.html %>   
+                                         <% include include/index-recommend.html %>   
+                                         <% include include/index-female.html %>   
+                                         <% include include/index-male.html %>   
+                                         <% include include/index-free.html %>   
+                                         <% include include/index-bottom.html %> 
+                                     </div>
+                             </div>
+                            <div style="float:left;width:550px;height: 100%;overflow-y:scroll;">
+                              <div>
+                                  <% include include/index-shelf.html %> 
+                              </div>
+                                 
+                             
+                            </div> 
+                    </div>
+               </div> 
         </div>
+      
+        
     </body>
     <script src="/static/script/vue.js"></script>
     <script src="/static/script/zepto.js"></script>

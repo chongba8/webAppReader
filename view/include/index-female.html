@@ -1,8 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-    </body>
-</html>
+
+<section class="channel-h5">
+	<div>
+		<div class="channel-h5-header">
+			<p class="channel-h5-header-title">女生最爱</p>
+		</div>
+		<ul class="list-h5">
+			<li v-for='item in female' v-if='$index<3'>
+				<div class="book-h5">
+					<div class="book-h5-cover">
+						<img v-bind:src='item.cover' alt="{{ item.title }}">
+						<p class="book-h5-progerss">{{ item.finish }}</p>
+					</div>
+					<div class="book-h5-info">
+						<p class="book-h5-title">{{ item.title }}</p>
+						<p class="book-h5-author">{{ item.authors }}</p>
+						<p class="book-h5-summary">{{ item.summary }}</p>
+						<div class="book-h5-tag">
+							<span v-for='tag in item.tags' v-if='$index<3'>{{ tag }}</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="channel-h5-footer">
+		<a href="javascript:">换一换</a>
+		<a href="/female">女生频道</a>
+	</div>
+</section>

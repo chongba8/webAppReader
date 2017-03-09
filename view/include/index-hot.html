@@ -1,8 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-    </body>
-</html>
+<section class="channel-group">
+	<div class="channel-group-header">
+		<h2 class="channel-group-title">本周最火</h2>
+	</div>
+	<ul class="book-table">
+		<li v-for='item in hot' v-if='$index<6'>
+			<div class="u-book">
+				<div class="book-cover">
+					<img v-bind:src='item.cover' alt="{{ item.title }}">
+					<span class="u-tag freetag"></span>
+				</div>
+				<div class="book-info">
+					<p>{{ item.title }}</p>
+				</div>
+				
+			</div>
+		</li>
+	</ul>
+	<a href="javasrcipt:" class="u-book-footer">显示更多&gt&gt</a>
+</section>
