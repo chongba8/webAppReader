@@ -147,4 +147,4 @@ app.use(controller.get('/ajax/search', function*(){
 }));
 
 console.log('test good!')
-app.listen(3001);
+app.listen(3001)

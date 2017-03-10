@@ -10,11 +10,11 @@
     </head>
     <body>
     
-        <div id="app" style="width: 550px;">
+        <div id="app" style="width: {{screenWidth}}px;">
                     <% include include/header.html %> 
-                <div class="container-wrap"  style="width: 550px;"> 
-                    <div style="width:1100px;height:100%;transition-duration:.5s;transform:translate3d({{position}}px,0px,0px);">
-                            <div style="float:left;width: 550px;height: 100%;overflow-y:scroll;">
+                <div class="container-wrap"  style="width: {{screenWidth}}px;"> 
+                    <div style="width:{{screenWidth*2}}px;height:100%;transition-duration:.5s;transform:translate3d({{position}}px,0px,0px);">
+                            <div style="float:left;width: {{screenWidth}}px;height: 100%;overflow-y:scroll;">
                                     <div>
                                          <% include include/index-top.html %>   
                                          <% include include/index-hot.html %>   
@@ -25,7 +25,7 @@
                                          <% include include/index-bottom.html %> 
                                      </div>
                              </div>
-                            <div style="float:left;width:550px;height: 100%;overflow-y:scroll;">
+                            <div style="float:left;width:{{screenWidth}}px;height: 100%;overflow-y:scroll;">
                               <div>
                                   <% include include/index-shelf.html %> 
                               </div>

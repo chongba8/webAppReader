@@ -24,6 +24,10 @@
             overflow: hidden;
             display: table-cell;
            }
+           .book_book-cover img{
+            width: 93px;
+            height: 124px;
+           }
            .book_u-book{
             padding: 30px 20px 30px 30px;
             width: 100%;
@@ -175,42 +179,42 @@
     </head>
     <body>
     
-        <div >
+        <div id="app">
             <% include include/common-header.html %> 
             <div class="book-scroll">
                 <div>
                     <section class="main-card">
                         <div class="book_u-book clearfloat">
                             <div class="book_book-cover">
-                                <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01OHtNm5l9m/gOfnsAHQJpT0Wr.jpg!s" alt="">
+                                <img v-bind:src='item.cover' alt="{{item.title}}">
                             </div>
                              <div class="book_book-info">
-                                    <h3 class="title">老九门</h3>
-                                    <span class="author">南们三俗</span>
+                                    <h3 class="title">{{item.title}}</h3>
+                                    <span class="author">{{item.authors}}</span>
                                     <div class="u-grade">
                                         <div class="star"></div>
-                                        <span class="reader">12个评价</span>
+                                        <span class="reader">{{ item.score_count }}个评价</span>
                                     </div>
-                                    <div class="price">价格:&nbsp5书币/千字</div>
+                                    <div class="price">价格:&nbsp{{ item.price }}书币/千字</div>
                                     <div class="book-number">
-                                        <span class="number">130万字</span>
+                                        <span class="number">{{ item.word_count }}字</span>
                                         <span class="book-finish">已完结</span>
                                     </div>
                             </div>
                         </div>
                         <div class="book-reading">
-                            <div class="reading">开始阅读</div>
+                            <div class="reading" v-on:click="readBook()">开始阅读</div>
                             <div class="download">下载</div>
                         </div>
                         <div class="book-text">
                             <div class="book-text-new">
                                 <span>
-                                    管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告管管的烦死了冯静恩时间浪费经理根据山东理工福利时间浪费奇偶为飞机数量发广告时间过了为国家我饿 附近的律师费 粉色礼服极武林风交付   圣诞节放假搜附近我呢 收费金额为
+                                    {{ item.content }}
                                 </span>
                                 <span>qq群:&nbsp012454122545</span>
                                 
                             </div>
-                            <div class="book-new-date">最新番翻跟新于：&nbsp2017-03-15</div>
+                            <div class="book-new-date">最新{{ item.lastest }}</div>
                         </div>
                         
                     </section>
@@ -218,8 +222,8 @@
                         <div class="category-tag">
                             <div class="cat-tag-head"><h3>类别标签</h3></div>
                             <div class="cat-tag">
-                                <span>悬疑灵异</span>
-                                <span>灵异鬼怪</span>
+                                <span v-for="tag in item.tags">{{ tag }}</span>
+                               
                             </div>
                         </div>
                     </section>
@@ -228,15 +232,15 @@
                             <div class="channel-group-header">
                                 <h2 class="channel-group-title">作者其他书</h2>
                             </div>
-                            <ul class="book-table">
-                                <li v-for='item in hot' v-if='$index<6'>
+                            <ul class="book-table" >
+                                <li v-for="book in author_books" v-if='$index<6'>
                                     <div class="u-book">
                                         <div class="book-cover">
-                                            <img v-bind:src='item.cover' alt="{{ item.title }}">
+                                            <img v-bind:src="book.cover" alt="{{ book.title }}">
                                             <span class="u-tag freetag"></span>
                                         </div>
                                         <div class="book-info">
-                                            <p>{{ item.title }}</p>
+                                            <p>{{ book.title }}</p>
                                         </div>
                                         
                                     </div>
@@ -261,6 +265,6 @@
     <script src="/static/script/vue.js"></script>
     <script src="/static/script/zepto.js"></script>
     <script src="/static/script/pages/book.js"></script>
-    <script src="/static/script/pages/index.js"></script>
+    
 
 </html>

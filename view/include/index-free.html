@@ -3,102 +3,14 @@
 		<h2 class="channel-group-title">限时免费</h2>
 	</div>
 	<ul class="book-table">
-		<li>
+		<li v-for='item in free' v-if='$index<6'>
 			<div class="u-book">
 				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
+					<img v-bind:src='item.data.cover' alt="{{ item.data.title }}">
 					<span class="u-tag freetag"></span>
 				</div>
 				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
-				</div>
-				
-			</div>
-		</li><li>
-			<div class="u-book">
-				<div class="book-cover">
-					<img src="http://cover.read.duokan.com/mfsv2/download/fdsc3/p01cEuul3Y50/zTADOZEJ5CTB3v.jpg!s" alt="">
-					<span class="u-tag freetag"></span>
-				</div>
-				<div class="book-info">
-					<p>小说名</p>
+					<p>{{ item.data.title }}</p>
 				</div>
 				
 			</div>

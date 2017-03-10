@@ -65,6 +65,8 @@
 	}
 	.head-tab i{
 		bottom: -1px;
+		text-align: center;
+		width: 50%;
 	}
 	.head-tab i:before{
 		content: ' ';
